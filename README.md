@@ -23,3 +23,18 @@
     "siteTitle": "My screenshots"
 }
 ```
+
+## Sample sharex custom uploader settings
+```json
+{
+  "Version": "12.4.1",
+  "DestinationType": "ImageUploader, FileUploader",
+  "RequestMethod": "POST",
+  "RequestURL": "http://localhost/upload",
+  "Headers": {
+    "key": "supersecretkey"
+  },
+  "Body": "MultipartFormData",
+  "FileFormName": "file"
+}
+```
