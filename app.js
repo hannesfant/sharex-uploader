@@ -23,6 +23,7 @@ else {
 }
 
 app.set('view engine', 'ejs')
+app.enable('trust proxy')
 
 // Make sure path is absolute
 if (!path.isAbsolute(config.uploadDir)) config.uploadDir = `${__dirname}/${config.uploadDir}`
