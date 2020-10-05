@@ -39,7 +39,8 @@ app.get('/', (req, res) => {
                 used: usedDisk,
                 total: totalDisk,
                 percentage: diskPercentage
-            }
+            },
+            theme: config.theme
         })
     })
 })
