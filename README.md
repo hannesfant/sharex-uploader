@@ -20,9 +20,14 @@
         "svg",
         "zip"
     ],
-    "siteTitle": "My screenshots"
+    "siteTitle": "My screenshots",
+    "theme": "light"
 }
 ```
+
+Currently available themes:
+- light
+- dark
 
 ## Sample sharex custom uploader settings
 ```json

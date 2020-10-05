@@ -39,7 +39,8 @@ app.get('/', (req, res) => {
                 used: usedDisk,
                 total: totalDisk,
                 percentage: diskPercentage
-            }
+            },
+            theme: config.theme
         })
     })
 })
@@ -100,4 +101,9 @@ app.use((req, res) => {
 const httpServer = http.createServer(app)
 httpServer.listen(config.port, () => {
     console.log(chalk.green(`HTTP API listening on 0.0.0.0:${config.port}`))
+    // Clear tmp dir on startup
+    fs.readdir(config.uploadDir, {}, (err, files) => {
+        if (err) return console.error(err)
+        files.forEach(f => fs.unlink(path.join(config.uploadDir, f), () => {}))
+    })
 });
