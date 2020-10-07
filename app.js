@@ -1,15 +1,15 @@
-const express = require('express');
-const app = express();
-const http = require('http');
-const chalk = require('chalk');
-const fs = require('fs');
-const fileUpload = require('express-fileupload');
-const shortid = require('shortid');
-const mime = require('mime-types');
+const express = require('express')
+const app = express()
+const http = require('http')
+const chalk = require('chalk')
+const fs = require('fs')
+const fileUpload = require('express-fileupload')
+const shortid = require('shortid')
+const mime = require('mime-types')
 const path = require('path');
 const checkDiskSpace = require('check-disk-space');
-const mb = require('./lib/msgBuilder.js');
-const isValidJSON = require('./lib/isvalidjson.js');
+const mb = require('./lib/msgBuilder.js')
+const isValidJSON = require('./lib/isvalidjson.js')
 
 const dataFile = `${__dirname}/config.json`;
 
