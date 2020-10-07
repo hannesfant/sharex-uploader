@@ -16,6 +16,9 @@
                 <small>Usage</small>
                 <p><%= disk.used %>/<%= disk.total %> GB // <%= disk.percentage %>%</p>
                 <div class="progress" style="width: <%= disk.percentage %>%"></div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Total Disk Space</div>
+                </div>
             </div>
         </div>
     </div>
